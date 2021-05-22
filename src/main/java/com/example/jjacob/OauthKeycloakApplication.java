@@ -56,11 +56,11 @@ public class OauthKeycloakApplication extends KeycloakWebSecurityConfigurerAdapt
     }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+        protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
         http.authorizeRequests()
                 .antMatchers("/admin*")
-                .hasRole("user")
+                .hasRole("admin")
                 .anyRequest()
                 .permitAll();
     }
