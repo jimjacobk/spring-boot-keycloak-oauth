@@ -72,3 +72,7 @@ but containing the refresh token instead of username and password:
 }
 ```
 Keycloak will respond to this with a new access_token and refresh_token.
+
+## Further Reading
+
+1. https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/
