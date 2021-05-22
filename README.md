@@ -76,3 +76,5 @@ Keycloak will respond to this with a new access_token and refresh_token.
 ## Further Reading
 
 1. https://spin.atomicobject.com/2016/05/30/openid-oauth-saml/
+2. https://developer.okta.com/books/api-security/authn/federated/
+3. https://medium.com/@robert.broeckelmann/authentication-vs-federation-vs-sso-9586b06b1380
