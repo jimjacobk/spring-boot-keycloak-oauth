@@ -1,22 +1,22 @@
 @startuml
-participant client
 participant resourceOwner
+participant client
 participant authorizationServer
 participant resoureServer
 autonumber
-client -> resourceOwner : Request Application Page
-resourceOwner --> client : Redirect to Authorization Server
-client -> authorizationServer : Request Login
-authorizationServer --> client : Deliver Login Page
-client -> authorizationServer : Send Login Details
+resourceOwner -> client : Request Application Page
+client --> resourceOwner : Redirect to Authorization Server
+resourceOwner -> authorizationServer : Request Login
+authorizationServer --> resourceOwner : Deliver Login Page
+resourceOwner -> authorizationServer : Send Login Details
 authorizationServer -> authorizationServer : Validate Login Details
-authorizationServer --> client : Redirect to Resource Owner
-client -> resourceOwner : User valid and Authorized Access
-resourceOwner -> authorizationServer : Get Access Tokens
-authorizationServer --> resourceOwner : Return Access Token
-resourceOwner -> resoureServer : Get Data
+authorizationServer --> resourceOwner : Redirect to Resource Owner
+resourceOwner -> client : User valid and Authorized Access
+client-> authorizationServer : Get Access Tokens
+authorizationServer --> client : Return Access Token
+client -> resoureServer : Get Data
 resoureServer -> resoureServer : Validate Access Token
-resoureServer --> resourceOwner : Retuen Data
-resourceOwner -> resourceOwner : Generate Required Page
-resourceOwner --> client : Serve the Generated Page
+resoureServer --> client : Retuen Data
+client -> client : Generate Required Page
+client --> resourceOwner : Serve the Generated Page
 @enduml
