@@ -79,3 +79,8 @@ Keycloak will respond to this with a new access_token and refresh_token.
 2. https://developer.okta.com/books/api-security/authn/federated/
 3. https://medium.com/@robert.broeckelmann/authentication-vs-federation-vs-sso-9586b06b1380
 4. https://github.com/dsyer/spring-security-oauth2-hydra
+5. http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/
+
+## Sequence Diagrams
+1. https://plantuml.com/sequence-diagram
+
